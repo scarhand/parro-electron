@@ -5,8 +5,9 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "package-darwin": "electron-packager . --icon=assets/icon/icon.icns --platform=darwin",
-    "package-mas": "electron-packager . --icon=assets/icon/icon.icns --platform=mas"
+    "package:darwin": "electron-packager . --icon=assets/icon/icon.icns --platform=darwin",
+    "package:mas": "electron-packager . --icon=assets/icon/icon.icns --platform=mas",
+    "package": "run-p \"package:* -- --overwrite\""
   },
   "repository": "https://github.com/scarhand/parro-electron",
   "keywords": [
@@ -17,5 +18,8 @@
   "devDependencies": {
     "electron": "^8.5.2",
     "electron-packager": "^14.2.1"
+  },
+  "dependencies": {
+    "yarn-run-all": "^3.1.1"
   }
 }
